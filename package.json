@@ -1,0 +1,29 @@
+{
+  "name": "composer-utilities",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "lint": "node_modules/.bin/eslint index.js",
+    "mocha": "node_modules/.bin/mocha --timeout 3000 ./tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tegud/composer-utilities.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tegud/composer-utilities/issues"
+  },
+  "homepage": "https://github.com/tegud/composer-utilities#readme",
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "mocha": "^3.0.2",
+    "should": "^11.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
