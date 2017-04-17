@@ -25,5 +25,17 @@ module.exports = {
         }
 
         return validTypes.includes(event.type) && validateKeys(event, keys);
+    },
+    getFirstMatchingProperty: (event, keys) => {
+        if(typeof keys === 'string') {
+            keys = [keys];
+        }
+
+        while(keys.length) {
+            const currentValue = _.get(event, keys.shift());
+            if(currentValue) {
+                return currentValue;
+            }
+        }
     }
 };
