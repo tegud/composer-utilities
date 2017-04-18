@@ -23,12 +23,18 @@ module.exports = {
         if(typeof keys === 'string') {
             keys = [keys];
         }
+        else if(typeof keys !== 'undefined') {
+            keys = [...keys];
+        }
 
         return validTypes.includes(event.type) && validateKeys(event, keys);
     },
     getFirstMatchingProperty: (event, keys) => {
         if(typeof keys === 'string') {
             keys = [keys];
+        }
+        else if(typeof keys !== 'undefined') {
+            keys = [...keys];
         }
 
         while(keys.length) {
