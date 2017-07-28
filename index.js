@@ -30,6 +30,7 @@ module.exports = {
         return validTypes.includes(event.type) && validateKeys(event, keys);
     },
     getFirstMatchingProperty: (event, keys) => {
+        keys = [...keys];
         if(typeof keys === 'string') {
             keys = [keys];
         }
